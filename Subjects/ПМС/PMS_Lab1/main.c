@@ -25,6 +25,8 @@ int main(void)
 	int leftdrop = intpart/100; //3
 	intpart = intpart - leftdrop*100; //10
 	
+	int godhelpme = -2;
+	
   int decpart = (int)((display_number - intpart)*100);//45
 	
 	int num_1 = (int)(intpart/10);

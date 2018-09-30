@@ -1,0 +1,16 @@
+C:\Users\alex\source\repos\Lab1\Lab2\bin\Debug\Lab2.dll
+C:\Users\alex\source\repos\Lab1\Lab2\bin\Debug\Lab2.pdb
+C:\Users\alex\source\repos\Lab1\Lab2\bin\Debug\Lab1.dll
+C:\Users\alex\source\repos\Lab1\Lab2\bin\Debug\Lab1.pdb
+C:\Users\alex\source\repos\Lab1\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
+C:\Users\alex\source\repos\Lab1\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\alex\source\repos\Lab1\Lab2\obj\Debug\Lab2.csproj.CopyComplete
+C:\Users\alex\source\repos\Lab1\Lab2\obj\Debug\Lab2.dll
+C:\Users\alex\source\repos\Lab1\Lab2\obj\Debug\Lab2.pdb
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\bin\Debug\Lab2.dll
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\bin\Debug\Lab2.pdb
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\bin\Debug\Lab1.dll
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\bin\Debug\Lab1.pdb
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\obj\Debug\Lab2.dll
+D:\KPI\Seventh-semester\Subjects\QA\Lab1\Lab2\obj\Debug\Lab2.pdb

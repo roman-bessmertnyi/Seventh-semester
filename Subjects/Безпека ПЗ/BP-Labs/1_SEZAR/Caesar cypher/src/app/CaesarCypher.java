@@ -4,9 +4,11 @@ public class CaesarCypher {
 	public static void main(String args[]) {
 		String strIn;
 		String strRussian = "àáâãäå¸æçèéêëìíîïğñòóôõö÷øùüûúışÿ ";
-		char[] chRussian = strRussian.toCharArray();
+		String strEnglish = "abcdefghijklmnopqrstuvwxyz ";
+		String strUsed = strEnglish;
+		char[] chUsed = strUsed.toCharArray();
 		String strOut = "";
-		strIn = "Ï×ÓÄÒÉÄÕÅ¨Ó×ÅÉ×Ä×Ó×ÄÉÖ×"; // enter text here
+		strIn = "YMJEGTTPENXESTYEF FNQFGQJ"; // enter text here
 		int encrypt = -1; // encrypt if 1 or decrypt if -1
 		strIn = strIn.toLowerCase();
 		int strLength = strIn.length();
@@ -16,10 +18,10 @@ public class CaesarCypher {
 		System.out.println();
 		System.out.println("Encrypted text is");
 		for (int i = 0; i < strLength; i++) {
-			int position = strRussian.indexOf(chIn[i]);
-			position = (position+shift*encrypt)%strRussian.length();
-			if (position < 0) position+=strRussian.length();
-			strOut += chRussian[position];
+			int position = strUsed.indexOf(chIn[i]);
+			position = (position+shift*encrypt)%strUsed.length();
+			if (position < 0) position+=strUsed.length();
+			strOut += chUsed[position];
 		}
 		strOut = strOut.toUpperCase();
 		System.out.println(strOut);
