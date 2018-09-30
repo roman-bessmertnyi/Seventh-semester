@@ -1,0 +1,10 @@
+.retardedbody {
+    background-image: url("20d99e6fe5d771d7e3fa13aef1591ec4.jpg");
+    background-color: #0000FF;
+	background-repeat: repeat-x;
+}
+
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
