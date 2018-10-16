@@ -33,11 +33,11 @@ public class ExceptionHandlerTests {
         when(logServerMock.recieveMessage(anyString()))
                 .thenReturn(true);
 
-        Exception e = new IOException();
+        Exception e = new NullPointerException();
         ExceptionManager excMg = new ExceptionManager(exceptionConfigReaderMock, logServerMock);
         excMg.HandleException(e);
         verify(logServerMock).recieveMessage(e.toString());
         Assert.assertEquals(0, excMg.getLogErrors());
-        Assert.assertTrue(logServerMock.recieveMessage("message"));
+        //Assert.assertTrue(logServerMock.recieveMessage("message"));
     }
 }
