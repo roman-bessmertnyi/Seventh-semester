@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\lab3;.\pvm_lib_</IncludePath>
+              <IncludePath>..\lab3;.\Libs\btn_lib;.\Libs\led_lib;.\Libs\pwm_lib;.\Libs\timer_lib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -378,32 +378,52 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>Main Source Group</GroupName>
           <Files>
             <File>
-              <FileName>Main.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Main.c</FilePath>
+              <FilePath>.\main.c</FilePath>
             </File>
             <File>
               <FileName>btn_lib.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\btn_lib.c</FilePath>
+              <FilePath>.\Libs\btn_lib\btn_lib.c</FilePath>
             </File>
             <File>
               <FileName>btn_lib.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\btn_lib.h</FilePath>
+              <FilePath>.\Libs\btn_lib\btn_lib.h</FilePath>
             </File>
             <File>
-              <FileName>pvm_lib_.c</FileName>
+              <FileName>led_lib.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pvm_lib_\pvm_lib_.c</FilePath>
+              <FilePath>.\Libs\led_lib\led_lib.c</FilePath>
             </File>
             <File>
-              <FileName>pvm_lib_.h</FileName>
+              <FileName>led_lib.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\pvm_lib_\pvm_lib_.h</FilePath>
+              <FilePath>.\Libs\led_lib\led_lib.h</FilePath>
+            </File>
+            <File>
+              <FileName>pwm_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libs\pwm_lib\pwm_lib.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm_lib.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Libs\pwm_lib\pwm_lib.h</FilePath>
+            </File>
+            <File>
+              <FileName>timer_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libs\timer_lib\timer_lib.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer_lib.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Libs\timer_lib\timer_lib.h</FilePath>
             </File>
           </Files>
         </Group>

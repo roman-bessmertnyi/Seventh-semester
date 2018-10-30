@@ -3,79 +3,90 @@
 #include "stm32f10x_gpio.h"
 #include <string.h>
 #include "btn_lib.h"
+#include "led_lib.h"
+#include "pwm_lib.h"
+#include "timer_lib.h"
 
-#define FULL_POWER 1
-#define MIN_POWER 0.1
-#define POWER_STEP 0.01
-#define CONTROL_STEP 0.05
-#define BUTTON_SPEED 3000
 
-double current_power = 1;// if not no global 
-double power_counter = 0;
-int button_tick_counter = 0;
+volatile uint8_t is_signal_update = 0;
+volatile uint8_t is_button_check = 0;
 
-void power_control(void)
+
+volatile uint8_t signal = 0;
+
+void send_signal_GPIOA(int signal, uint16_t GPIO_Pin)
 {
-	//until power_counter hits current_power, the led is on. Then it's off
-	if (power_counter < current_power){
-				GPIO_SetBits(GPIOA, GPIO_Pin_0);
-		}else {
-		GPIO_ResetBits(GPIOA, GPIO_Pin_0);
-		}
-	//power_counter goes from MIN_POWER to FULL_POWER with POWER_STEP
-	if (power_counter < FULL_POWER){
-		power_counter += POWER_STEP;
-	}else {
-				power_counter = 0;
-				}
-}
-
-void button_asker(void)// h
-{
-	if (++button_tick_counter >= BUTTON_SPEED) 
+	if (signal == 1)
 	{
-		if (btn_c15_test_GND_connect()) 
-		{
-			//increase current power by CONTROL_STEP
-			current_power += CONTROL_STEP;
-			if (current_power > FULL_POWER)
-			{
-				current_power = MIN_POWER;
-			}
-		}
-		button_tick_counter = 0;
+		GPIO_SetBits(GPIOA, GPIO_Pin);
+	}
+	else
+	{
+		GPIO_ResetBits(GPIOA, GPIO_Pin);
 	}
 }
 
-
-
 void TIM4_IRQHandler(void)
 {
-        if (TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET)
-        {
-            // ????'?????? ???????? ??????. ???? ????? ?? ???????, ????? ??????? ??????????? ????? ???????? ????
-            TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
-						power_control();
-						button_asker();
-          
-        }
+		if (TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET)
+		{
+			TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
+			is_signal_update = 1;
+		}
+		
+		//signal ^=1;
 }
 
-
-
-void SysTick_Handler(void){                               /* SysTick interrupt Handler. */
-	//LED_Power_Handler();
-	button_asker();
+void TIM2_IRQHandler(void)
+{
+		if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
+		{
+			TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+			is_button_check = 1;
+		}
+		
 }
 
 int main (void)
 {
+	btn_init_in_c(GPIO_Pin_15);
+	btn_init_in_c(GPIO_Pin_13);
+	init_GPIOA(GPIO_Pin_0);
 	SetSysClockToHSE();
-	btn_init_in_c15();
-	led_init_in_a0();
-	TIMER4_init(1); //period 10 milsec
+	TIMER4_init(100); //pwm period
+	TIMER2_init(100); //button check period
+	
+	PWM_Generator PWM_Generator_A0;
+	PWM_Generator_A0.FULL_POWER = 1;
+	PWM_Generator_A0.MIN_POWER = 0.1;
+	PWM_Generator_A0.POWER_STEP = 0.01;
+	PWM_Generator_A0.CONTROL_STEP = 0.05;
+	PWM_Generator_A0.current_power = 1;
+	PWM_Generator_A0.power_counter = 0;
+	
 	
 	while(1)
 	{
+		if (is_signal_update == 1)
+		{
+			signal = PWM_signal(PWM_Generator_A0);
+			PWM_Generator_A0 = update_PWM(PWM_Generator_A0);
+			
+			is_signal_update = 0;
+		}
+		if (is_button_check == 1)
+		{
+			if (btn_in_c_test_GND_connect(GPIO_Pin_15) == 1)
+			{
+				PWM_Generator_A0 = increase_power(PWM_Generator_A0);
+			}
+			if (btn_in_c_test_GND_connect(GPIO_Pin_13) == 1)
+			{
+				PWM_Generator_A0 = decrease_power(PWM_Generator_A0);
+			}
+			
+			is_button_check = 0;
+		}
+		send_signal_GPIOA(signal, GPIO_Pin_0);
 	}
 }
