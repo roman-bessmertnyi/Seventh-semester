@@ -11,6 +11,10 @@ void btn_init_in_c(uint16_t GPIO_Pin){
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
+
+
+
+
 uint8_t btn_in_c_test_GND_connect(uint16_t GPIO_Pin){
 	if (!GPIO_ReadInputDataBit(GPIOC, GPIO_Pin))// Catch from GND 
 	{

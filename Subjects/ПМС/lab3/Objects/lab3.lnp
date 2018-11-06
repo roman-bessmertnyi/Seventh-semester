@@ -1,8 +1,6 @@
 --cpu Cortex-M3
 ".\objects\main.o"
 ".\objects\btn_lib_1.o"
-".\objects\led_lib.o"
-".\objects\pwm_lib.o"
 ".\objects\timer_lib.o"
 ".\objects\misc.o"
 ".\objects\stm32f10x_gpio.o"

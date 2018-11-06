@@ -17,3 +17,4 @@
 .\objects\main.o: .\Libs\led_lib\led_lib.h
 .\objects\main.o: .\Libs\pwm_lib\pwm_lib.h
 .\objects\main.o: .\Libs\timer_lib\timer_lib.h
+.\objects\main.o: math_.h

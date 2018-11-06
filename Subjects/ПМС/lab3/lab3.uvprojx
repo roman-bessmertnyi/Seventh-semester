@@ -396,26 +396,6 @@
               <FilePath>.\Libs\btn_lib\btn_lib.h</FilePath>
             </File>
             <File>
-              <FileName>led_lib.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libs\led_lib\led_lib.c</FilePath>
-            </File>
-            <File>
-              <FileName>led_lib.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Libs\led_lib\led_lib.h</FilePath>
-            </File>
-            <File>
-              <FileName>pwm_lib.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libs\pwm_lib\pwm_lib.c</FilePath>
-            </File>
-            <File>
-              <FileName>pwm_lib.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Libs\pwm_lib\pwm_lib.h</FilePath>
-            </File>
-            <File>
               <FileName>timer_lib.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Libs\timer_lib\timer_lib.c</FilePath>
@@ -424,6 +404,11 @@
               <FileName>timer_lib.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Libs\timer_lib\timer_lib.h</FilePath>
+            </File>
+            <File>
+              <FileName>math_.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\math_.h</FilePath>
             </File>
           </Files>
         </Group>
