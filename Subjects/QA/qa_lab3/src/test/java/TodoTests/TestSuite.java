@@ -6,7 +6,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-        NewTodo.class ,
+        NewTodo.class,
         NoTodos.class,
         WhenPageIsInitiallyOpened.class,
         Editing.class

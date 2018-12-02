@@ -1,0 +1,19 @@
+{
+  "name": "keyboard",
+  "version": "1.0.0",
+  "description": "https://flask-socketio.readthedocs.io/en/latest/",
+  "main": "static/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Yurii Liubchenko",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}

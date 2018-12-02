@@ -54,9 +54,12 @@ void TIM3_IRQHandler(void){
 int main(void)
 {
 	SetSysClockTo72();
-	TIMER2_input_init_A2(72);
+	TIMER2_input_init_A2(7200);
 	TIMER4_PWM_init_B8(72, PERIOD);
 	TIMER3_init(7200, 1000);
+	
+	double pulse_width = 0.01;
+	TIM4->CCR3 = PERIOD * pulse_width;
 	
 	TM1637_init();	
 	TM1637_brightness(BRIGHTEST);

@@ -3,8 +3,6 @@ package TodoTests;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 
 public class Editing extends TestSetup{
     @Before

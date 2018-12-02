@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Virtual keyboard</title>
+
+    <!-- STYLES -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='image/favicon.png') }}" type="image/png">
+    <!-- END STYLES -->
+    <!-- PASS SOCKET IP -->
+</head>
+<body>
+<!-- SCRIPTS -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+<!-- END SCRIPTS -->
+
+<!-- PAGE -->
+<div class="container center-align">
+    <h3 class="title-text"> Virtual keyboard </h3>
+</div>
+<div class="container keyboard-container">
+    <div class="row keyboard">
+        <div class="col m6 offset-m3 s12 center-align keyboard z-depth-3">
+            <div class="row display center-align">
+                <span class="display-text" id='display-text'>&nbsp;</span>
+            </div>
+
+            <div class="row center-align keyboard-row">
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 1 }})"
+                     onmouseup="ui.unpressKey({{ 1 }})"
+                     ontouchstart="ui.pressKey({{ 1 }})"
+                     ontouchend="ui.unpressKey({{ 1 }})">1
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 2 }})"
+                     onmouseup="ui.unpressKey({{ 2 }})"
+                     ontouchstart="ui.pressKey({{ 2 }})"
+                     ontouchend="ui.unpressKey({{ 2 }})">2
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 3 }})"
+                     onmouseup="ui.unpressKey({{ 3 }})"
+                     ontouchstart="ui.pressKey({{ 3 }})"
+                     ontouchend="ui.unpressKey({{ 3 }})">3
+                </div>
+            </div>
+            <div class="row center-align keyboard-row">
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 4 }})"
+                     onmouseup="ui.unpressKey({{ 4 }})"
+                     ontouchstart="ui.pressKey({{ 4 }})"
+                     ontouchend="ui.unpressKey({{ 4 }})">4
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 5 }})"
+                     onmouseup="ui.unpressKey({{ 5 }})"
+                     ontouchstart="ui.pressKey({{ 5 }})"
+                     ontouchend="ui.unpressKey({{ 5 }})">5
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 6 }})"
+                     onmouseup="ui.unpressKey({{ 6 }})"
+                     ontouchstart="ui.pressKey({{ 6 }})"
+                     ontouchend="ui.unpressKey({{ 6 }})">6
+                </div>
+            </div>
+            <div class="row center-align keyboard-row">
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 7 }})"
+                     onmouseup="ui.unpressKey({{ 7 }})"
+                     ontouchstart="ui.pressKey({{ 7 }})"
+                     ontouchend="ui.unpressKey({{ 7 }})">7
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 8 }})"
+                     onmouseup="ui.unpressKey({{ 8 }})"
+                     ontouchstart="ui.pressKey({{ 8 }})"
+                     ontouchend="ui.unpressKey({{ 8 }})">8
+                </div>
+                <div class="col s4 keyboard-key center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 9 }})"
+                     onmouseup="ui.unpressKey({{ 9 }})"
+                     ontouchstart="ui.pressKey({{ 9 }})"
+                     ontouchend="ui.unpressKey({{ 9 }})">9
+                </div>
+            </div>
+            <div class="row center-align keyboard-row">
+                <div class="col s4 keyboard-key-dark center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey('{{ '*' }}')"
+                     onmouseup="ui.unpressKey('{{ '*' }}')"
+                     ontouchstart="ui.pressKey('{{ '*' }}')"
+                     ontouchend="ui.unpressKey('{{ '*' }}')">*
+                </div>
+                <div class="col s4 keyboard-key-dark center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey({{ 0 }})"
+                     onmouseup="ui.unpressKey({{ 0 }})"
+                     ontouchstart="ui.pressKey({{ 0 }})"
+                     ontouchend="ui.unpressKey({{ 0 }})">0
+                </div>
+                <div class="col s4 keyboard-key-dark center-align waves-effect waves-light"
+                     onmousedown="ui.pressKey('{{ '#' }}')"
+                     onmouseup="ui.unpressKey('{{ '#' }}')"
+                     ontouchstart="ui.pressKey('{{ '#' }}')"
+                     ontouchend="ui.unpressKey('{{ '#' }}')">#
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <div class="row">
+                <div class="col s6">
+                    <div class="row valign-wrapper">
+                        <div class="col s3 red-dod" id="socketStatus"></div>
+                        <div class="col s8 offset-s1 status-text">Socket connection</div>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="row valign-wrapper">
+                        <div class="col s3 red-dod" id="comStatus"></div>
+                        <div class="col s8 offset-s1 status-text">Com connection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="page-footer footer">
+    <div class="container center-align">
+
+        ©
+        <script>document.write(new Date().getFullYear())</script>
+        Provided by IT-83мп: Boychuk, Liubchenko, Sydko.
+    </div>
+</footer>
+
+<!-- END PAGE -->
+
+</body>
+</html>

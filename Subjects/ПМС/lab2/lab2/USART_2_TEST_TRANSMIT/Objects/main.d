@@ -17,4 +17,7 @@
 .\objects\main.o: .\_lib_tim_1637\tm1637.h
 .\objects\main.o: .\_lib_brown_delay\brown_delay.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: lab2.h
 .\objects\main.o: .\_lib_btn_led\btn_lib.h
+.\objects\main.o: .\_lib_brown_delay\brown_delay.h
+.\objects\main.o: .\_lib_usart\usart_lib.h

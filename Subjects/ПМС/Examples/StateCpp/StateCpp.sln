@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StateCpp", "StateCpp\StateCpp.vcxproj", "{AC5108FF-F647-49A0-8ABA-B4E6FEFE98A1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StateCppGlobal", "StateCppGlobal\StateCppGlobal.vcxproj", "{E959993A-2A85-47CB-889A-F5109C4B3F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC5108FF-F647-49A0-8ABA-B4E6FEFE98A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC5108FF-F647-49A0-8ABA-B4E6FEFE98A1}.Debug|Win32.Build.0 = Debug|Win32
+		{AC5108FF-F647-49A0-8ABA-B4E6FEFE98A1}.Release|Win32.ActiveCfg = Release|Win32
+		{AC5108FF-F647-49A0-8ABA-B4E6FEFE98A1}.Release|Win32.Build.0 = Release|Win32
+		{E959993A-2A85-47CB-889A-F5109C4B3F5A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E959993A-2A85-47CB-889A-F5109C4B3F5A}.Debug|Win32.Build.0 = Debug|Win32
+		{E959993A-2A85-47CB-889A-F5109C4B3F5A}.Release|Win32.ActiveCfg = Release|Win32
+		{E959993A-2A85-47CB-889A-F5109C4B3F5A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

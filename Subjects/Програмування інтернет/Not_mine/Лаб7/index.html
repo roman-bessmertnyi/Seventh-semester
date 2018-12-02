@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script>
+		function Person(name, job) {
+			this.name = name;
+			this.isPerson = true;
+			this.changeName = function (name) {
+				this.name = name;
+			};
+			this.job = job;
+		}
+		
+		Jack = new Person("jack", function(a, b) {return a+b;});
+		
+		console.log(Jack.name);
+		console.log(Jack.isPerson);
+		Jack.changeName("mike");
+		console.log(Jack.name);
+		console.log(Jack.job(2,2));
+		
+		function Human(age) {
+			this.age = age;
+		}
+		
+		function compareAges(a, b) {
+		  return a.age - b.age;
+		}
+		
+		var humans = [new Human(3), new Human(5),new  Human(9), new Human(1), new Human(0), new Human(14), new Human(7), new Human(2)];
+		
+		console.log(humans);
+		
+		humans.sort(function (a, b) {
+		  return a.age - b.age;
+		});
+		
+		console.log(humans);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 3px solid black;
+	border-color: green;
+	padding: 15px;
+}
+
+ul {
+    list-style-image: url(faq_list5_2.png);
+   }

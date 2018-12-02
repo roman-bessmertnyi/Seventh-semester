@@ -1,0 +1,28 @@
+﻿Построение начато 12.11.2018 13:44:58.
+     1>Проект "c:\Users\Student\documents\visual studio 2010\Projects\StateCpp\StateCpp\StateCpp.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Обращение к "Debug\StateCpp.unsuccessfulbuild".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\StateCpp.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StateCpp.cpp
+         StateCpp.cpp
+       ManifestResourceCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\student\documents\visual studio 2010\Projects\StateCpp\Debug\StateCpp.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\StateCpp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\student\documents\visual studio 2010\Projects\StateCpp\Debug\StateCpp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\student\documents\visual studio 2010\Projects\StateCpp\Debug\StateCpp.lib" /MACHINE:X86 Debug\StateCpp.exe.embed.manifest.res
+         Debug\StateCpp.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\StateCpp.exe.embed.manifest" /manifest Debug\StateCpp.exe.intermediate.manifest
+         Для всех выходных данных обновления не требуется.
+       LinkEmbedManifest:
+         Для всех выходных данных обновления не требуется.
+         StateCpp.vcxproj -> c:\users\student\documents\visual studio 2010\Projects\StateCpp\Debug\StateCpp.exe
+       FinalizeBuildStatus:
+         Файл "Debug\StateCpp.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\StateCpp.lastbuildstate".
+     1>Построение проекта "c:\Users\Student\documents\visual studio 2010\Projects\StateCpp\StateCpp\StateCpp.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:01.69

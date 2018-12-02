@@ -1,0 +1,43 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="math.js"></script>
+</head>
+<body>
+	<div>
+		<p> x = <span id ="x"></span>, y = <span id ="y"></span>, и z = <span id ="z"></span></p>
+ 
+		<p> x += y - x++ * z;</p>
+		
+		<p> x = <span id ="stat1"></span></p>
+
+		<p> z = -- x - y * 5;</p>
+		
+		<p> z = <span id ="stat2"></span></p>
+
+		<p> y /= x + 5 % z;</p>
+		
+		<p> y = <span id ="stat3"></span></p>
+
+		<p> z = x++ + y * 5;</p>
+		
+		<p> z = <span id ="stat4"></span></p>
+
+		<p> x = y - x++ * z;</p>
+		
+		<p> x = <span id ="stat5"></span></p>
+
+		<p> mean of 1, 3 and 7 is <span id ="mean"></span></p>
+		
+		<button type="button" onclick='document.getElementById("mean").innerHTML = mean(1, 3, 7)'>Get Mean!</button>
+		<p>
+	</div>
+	
+	<div>
+		<p>Radius: <input id ="r" type="text"></p>
+		<p>Height: <input id ="h" type="text"></p>
+		<p> Volume = <span id ="V"></span></p>
+		<p> Surface = <span id ="S"></span></p>
+		<p><button type="button" onclick="calculateCylinder()">Calculate Cylinder</button></p>
+	</div>
+	
+</body>

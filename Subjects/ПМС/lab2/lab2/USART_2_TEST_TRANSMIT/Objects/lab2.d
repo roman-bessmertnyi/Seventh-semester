@@ -1,5 +1,5 @@
-.\objects\lab2.o: Lab2\lab2.c
-.\objects\lab2.o: .\_lib_btn_led\btn_lib.h
+.\objects\lab2.o: lab2.c
+.\objects\lab2.o: lab2.h
 .\objects\lab2.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\lab2.o: .\RTE\_Lab2\RTE_Components.h
 .\objects\lab2.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
@@ -13,8 +13,9 @@
 .\objects\lab2.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\lab2.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\lab2.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h
+.\objects\lab2.o: .\_lib_btn_led\btn_lib.h
 .\objects\lab2.o: .\_lib_brown_delay\brown_delay.h
 .\objects\lab2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lab2.o: .\_lib_tim_1637\tm1637.h
 .\objects\lab2.o: .\_lib_usart\usart_lib.h
 .\objects\lab2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\lab2.o: Lab2\lab2.h
