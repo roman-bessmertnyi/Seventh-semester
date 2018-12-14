@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hud {
+	height: 25%;
+}
+
+.moveBlock {
+	border-radius: 2vw;
+
+	position: fixed;
+	top: 50%;
+	left: 80%;
+	width: 15vw;
+	height: 20vw;
+	background-color: #BCF0FC;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.moveButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.rotateBlock {
+	border-radius: 2vw;
+	position: fixed;
+	top: 60%;
+	right: 75%;
+	width: 20vw;
+	height: 15vw;
+	background-color: #BCF0FC;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.rotateButton {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.arrow {
+	font-size:8vw;
+
+	color:#244A9D;
+}
+
+.imageContainer {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.pathCanvas {
+    border-radius: 1vw;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: #BCF0FC;
+
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+html {
+	font-family: "Lucida Sans", sans-serif;
+}
